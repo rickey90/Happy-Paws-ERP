@@ -1,0 +1,59 @@
+<% include partials/header %>
+<%- messages('message', locals) %>
+
+<h1>Happy Paws Employee Portal</h1>
+<br>
+
+<h4>My Profile</h4>
+<br>
+
+<table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">First Name:</th>
+        <td><%= user.fName %></td>
+      </tr>
+      <tr>
+        <th scope="row">Last Name:</th>
+        <td><%= user.lName %></td>
+      </tr>
+      <tr>
+        <th scope="row">Email:</th>
+        <td><%= user.email %></td>
+      </tr>
+      <tr>
+        <th scope="row">Account Created On:</th>
+        <td><%= user.createdAt %></td>
+      </tr>
+      <tr>
+        <th scope="row">Department:</th>
+        <td><%= user.department %></td>
+      </tr>
+      <tr>
+        <th scope="row">Title:</th>
+        <td><%= user.title %></td>
+      </tr>
+      <tr>
+        <th scope="row">Signature:</th>
+        <td><img class='sig' src="<%= sig_url %>"></td>
+      </tr>
+    </tbody>
+</table>
+<br>
+
+<div class='buttons'>
+    <a href="/users/usereditprofile"><button class="btn btn-custom1 btn-md">Edit Profile</button></a>
+</div>
+
+<div class='buttons'>
+    <a href="/users/userresetpassword"><button class="btn btn-custom1 btn-md">Change Password</button></a>
+</div>
+
+<div class='buttons'>
+    <a href="/users/usermainmenu"><button class="btn btn-custom1 btn-md">Back to Main Menu</button></a>
+</div>
+
+
+
+
+<% include partials/footer %>

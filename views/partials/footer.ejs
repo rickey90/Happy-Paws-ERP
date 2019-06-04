@@ -1,0 +1,60 @@
+        <footer>
+        </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/js/deleteUser.js"></script>
+    <script src="/js/deleteAdmin.js"></script>
+    <script src="/js/deleteAward.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script src ="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src ="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+   $('#userAccountsTable').DataTable({
+     'columnDefs': [ {
+        'targets': [7,8], /* Disable sorting on Edit & Delete Column */
+        'orderable': false, 
+     }]
+   });
+});
+    </script>
+
+    <script>
+        $(document).ready(function(){
+       $('#adminAccountsTable').DataTable({
+         'columnDefs': [ {
+            'targets': [5,6], /* Disable sorting on Edit & Delete Column */
+            'orderable': false, 
+         }]
+       });
+    });  
+    </script>
+
+<script>
+        $(document).ready(function(){
+       $('#displayawardTable').DataTable({
+         'columnDefs': [ {
+            'targets': [5], /* Disable sorting on Delete Column */
+            'orderable': false, 
+         }]
+       });
+    });  
+    </script>
+
+<script>
+  $(document).ready(function(){
+ $('#adminViewAllAwards').DataTable({
+   /* 'columnDefs': [ {
+      'targets': [7,8], /* Disable sorting on Edit & Delete Column */
+      /* 'orderable': false, 
+   }] */ 
+ });
+});
+  </script>
+
+    </body>
+</html>

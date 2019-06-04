@@ -1,0 +1,54 @@
+<% include partials/header %>
+<%- messages('message', locals) %>
+<% include partials/errorHandler %>
+
+<h1>Happy Paws Employee Portal</h1>
+<br>
+
+<h4>Edit Admin Account</h4>
+<br>
+
+<form action="/users/admin/editadminaccount/<%= admin.adminId %>" method="POST">
+    <div class="form-group row">
+        <label for='userName' class='col-sm-2 col-form-label'>User Name:</label>
+        <div class='col-sm-10'>
+            <input class="form-control" name="userName" type="text" value="<%= admin.userName %>"  required>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <label for='title' class='col-sm-2 col-form-label'>Job Title:</label>
+        <div class='col-sm-10'>
+            <input type="text" class="form-control" name="title" value="<%= admin.title %>" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for='department' class='col-sm-2 col-form-label'>Department:</label>
+        <div class='col-sm-10'>
+            <select class="form-control" name="department" value="<%= admin.department %>">
+                <option value= "<%= admin.department %>" selected="selected"><%= admin.department %></option>
+                <option value = "Accounting and Finance">Accounting and Finance</option>
+                <option value = "Daycare Attendants">Daycare Attendants</option>
+                <option value = "Human Resources">Human Resources</option>
+                <option value = "Information Systems">Information Systems</option>
+                <option value = "Legal">Legal</option>
+                <option value = "Marketing">Marketing</option>
+                <option value = "Operations">Operations</option>
+                <option value = "Veterinary Care">Veterinary Care</option>
+            </select>
+        </div>
+    </div>
+    <div class='buttons'>
+        <button class="btn btn-custom1 btn-md" type="submit" value="submit">Update Account</button>
+    </div>
+</form>
+
+<div class='buttons'>
+    <a href="/users/admin/manageadminaccounts"><button class="btn btn-custom1 btn-md">Back to Manage Admin Accounts</button></a>
+</div>
+
+
+
+
+<% include partials/footer %>
